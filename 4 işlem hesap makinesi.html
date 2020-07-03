@@ -1,0 +1,43 @@
+<html 
+<head>
+    <title>Buton Ödevi
+    </title>
+    <script type="text/javascript">
+        function toplam() {
+            var deger1 = parseInt(document.getElementById('sayi1').value);
+            var deger2 = parseInt(document.getElementById('sayi2').value);
+            document.getElementById('sonuc').value = deger1 + deger2;
+        }
+        function cikartma() {
+            var deger1 = parseInt(document.getElementById('sayi1').value);
+            var deger2 = parseInt(document.getElementById('sayi2').value);
+            document.getElementById('sonuc').value = deger1 - deger2;
+        }
+        function carpma() {
+            var deger1 = parseInt(document.getElementById('sayi1').value);
+            var deger2 = parseInt(document.getElementById('sayi2').value);
+            document.getElementById('sonuc').value = deger1 * deger2;
+        }
+        function bolme() {
+            var deger1 = parseInt(document.getElementById('sayi1').value);
+            var deger2 = parseInt(document.getElementById('sayi2').value);
+            document.getElementById('sonuc').value = deger1 / deger2;
+        }
+        function ortalama() {
+            var deger1 = parseInt(document.getElementById('sayi1').value);
+            var deger2 = parseInt(document.getElementById('sayi2').value);
+            document.getElementById('sonuc').value = (deger1 + deger2)/2;
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="sayi1" /> <input type="text" id="sayi2" />
+<br />
+<input type="button" value="+" id="topla" onclick="toplam()" />
+<input type="button" value="-" id="fark" onclick="cikartma()" />
+<input type="button" value="*" id="carp" onclick="carpma()" />
+<input type="button" value="/" id="bol" onclick="bolme()" />
+<input type="button" value="ortalama" id="bol" onclick="ortalama()" /><br />
+Sonuç<br /><input type="text" id="sonuc" />
+</body>
+</html>
