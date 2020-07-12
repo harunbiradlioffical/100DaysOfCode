@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style>
+		input[type="button"]{
+			width: 200px;
+			height: 200px;
+			border: none;
+			font-size: 3em;
+			background: #C00;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<input type=button onclick="arttır()" value="+">
+	<input type=button onclick="azalt()" value="-">
+	<input type=button id="sonuc" value="0">
+
+	<script type="text/javascript">
+		function arttır(){
+			var sonuc=document.getElementsById("sonuc");
+			sonuc.value=Number(sonuc.value)+1;
+		}
+		function azalt(){
+			var sonuc=document.getElementsById("sonuc");
+			sonuc.value=Number(sonuc.value)-1;
+		}
+	</script>
+
+</body>
+</html>
