@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Üst bilgi/Blog başlığı */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* üst kısım */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* bağlantılar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* üzerine gelince renk değişimi */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* iki sütun oluşacak */
+/* sol sütun */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* sağ sütun */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Görüntü */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* makale için kard */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* temizleme */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* alt bilgi */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* ekran daha geniş olunca */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* ekran daha geniş olunca */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>kişisel web sitesi</h1>
+  <p>hoş geldiniz.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">Ana Sahife</a>
+  <a href="#">Market</a>
+  <a href="#">Disk</a>
+  <a href="#" style="float:right">Boşluk</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Çalışmalar</h2>
+      <h5>Günlük, 17 Temmuz Cuma, 2020</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Bir şeyler hakkında</p>
+      <p>Bir kaç alıtı bilginin yer aldığı paragraf</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Ben</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Hakkımda yazısı.</p>
+    </div>
+    <div class="card">
+      <h3>trend</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Sosyal Media</h3>
+      <p>hesaplar</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>alt kısım için hazırlanmış bilgiler</h2>
+</div>
+
+</body>
+</html>
