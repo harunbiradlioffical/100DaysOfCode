@@ -1,0 +1,22 @@
+<html> <head> <title>Sıralama</title> 
+	<script language="JavaScript">
+	function sirala() {
+	var kelime = new Array(9)
+	var i, j, k, m, ara
+	for (i=0; i <=9; i++) {
+	kelime[i] = prompt("Metinsel bir ifade girin lütfen...","Buraya,") }
+	//Sayıları sıralıyoruz.
+	for (j=0; j <=9; j++) {
+	for (k=0; k <=8; k++) {
+	if (kelime[k] > kelime[k+1]) {
+	ara =kelime[k]
+	kelime[k] = kelime[k+1]
+	kelime[k+1] = ara } } }
+	for (m=0; m <= 9; m++) document.write(m + 1 + ". kelime = " + kelime[m] + "<br>")
+	} 
+	</script> </head>
+	<body> Düğmeye basarak 10 tane yazıyı alfabetik sıraya
+		sokabilirsiniz <wbr> <input type="button" name="tikla" value="Sırala"
+		onClick=sirala()> 
+	</body>
+</html>
