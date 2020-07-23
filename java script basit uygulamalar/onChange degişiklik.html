@@ -1,0 +1,18 @@
+<html> 
+	<head> 
+		<title>onChange</title>
+		<script language="JavaScript1.2">
+			function yaz(secnesnesi){
+			return secnesnesi.options[secnesnesi.selectedIndex].value}
+		</script> 
+	</head> 
+	<body> 
+		<form name="form1">
+			<select name="mesaj" size="3" onchange="alert(yaz(this.form.mesaj))">
+				<option name="mesaj" value="Bu">mesaj1
+				<option name="mesaj" value="program">mesaj2
+				<option name="mesaj" value="onChange komutu ile yapılmıştır">mesaj3
+			</select>
+		</form> 
+	</body> 
+</html>
