@@ -1,0 +1,19 @@
+<html> 
+	<head><title>jQuery Context</title>
+		<script type="text/javascript" src="jquery-3.5.1.js"> </script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			$("#b1").click(function(){
+			$("#cikti").html($("input:text", document.forms[0]).val()); });
+			$("#b2").click(function(){
+			$("#cikti").html(jQuery("input:text", document.forms[1]).val()); }); });
+		</script> 
+	</head>
+	<body> <h1>jQuery Context</h1>
+		<form> <input/> </form>
+		<form> <input/> </form><hr/>
+		<button id="b1"> Tikla </button> 
+		<button id="b2"> Tikla </button>
+		<div id="cikti"> </div> 
+	</body> 
+</html>
