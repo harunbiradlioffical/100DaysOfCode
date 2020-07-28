@@ -1,0 +1,13 @@
+<html> 
+	<head><title>extend()</title>
+		<script type="text/javascript" src="jquery-3.5.1.js"> </script>
+		<script type="text/javascript">
+		jQuery.extend( { sayi: function() { return Math.random(); } });
+		// jQuery.extend( {sayi: 12});
+		$(document).ready(function() {
+		$("#cikti").text(jQuery.sayi()); });
+		//$("#cikti").text(jQuery.sayi); });
+		</script> 
+	</head>
+	<body> <div id="cikti"> </div> </body>
+</html>
