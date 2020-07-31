@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+        $("#myList li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+  </head>
+  <body>
+
+    <h2>Filtrelenebilir Liste</h2>
+    <p>Belirli öğeler için listede arama yapar. Giriş alanına bir şey yazın.</p>  
+    <input id="myInput" type="text" placeholder="Ara..">
+    <br>
+
+    <ul id="myList">
+      <li>facebook</li>
+      <li>google</li>
+      <li>youtube</li>
+      <li>news</li>
+      <li>amazon</li>
+      <li>translate</li>
+      <li>instagram</li>
+      <li>gmail</li>
+      <li>outlook</li>
+      <li>yahoo</li>
+      <li>samsung</li>
+      <li>twitter</li>
+      <li>teknopat</li>
+      <li>vatan bilgisayar</li>
+      <li>hepsi burada</li>
+      <li>n11</li>
+    </ul>
+  
+  </body>
+</html>
+  
