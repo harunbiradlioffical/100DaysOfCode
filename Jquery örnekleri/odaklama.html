@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.5.1.js"></script>
+		<script>
+		$(document).ready(function(){
+		    $("input").focus(function(){
+		        $("span").css("display", "inline").fadeOut(2000);
+		    });/*from w ww . java2s.c o  m*/
+		});
+		</script>
+		<style>
+			span {
+			    display: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<input type='text'>
+
+		<span>message</span>
+		<p>tıkla ve gör odaklan</p>
+
+	</body>
+</html>
