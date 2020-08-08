@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type='text/css'>
+      .menu {<!--   w w  w .  j av a2s .  c om-->
+        display: block;
+        width: 940px;
+        height: 40px;
+        list-style: inside none;
+        padding: 0;
+        margin: 10px;
+        border-top: 1px solid #aaaaaa;
+        border-bottom: 1px solid #aaaaaa;
+      }
+
+      .menu li {
+        list-style: inside none;
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: relative;
+      }
+
+      .menu li a {
+        outline: none;
+        display: block;
+        margin: 0px;
+        padding: 11px 10px;
+        vertical-align: middle;
+        line-height: inherit;
+        text-decoration: none;
+        border-left: medium none;
+        border-right: 1px solid #aaaaaa;
+      }
+
+      .menu li a:hover {
+        background: none repeat scroll 0 0;
+        margin-top: -1px
+      }
+
+      .drop {
+        position: relative;
+        z-index: 2;
+      }
+
+      .menu li:hover a.drop {
+        color: #000;
+        background: #fff;
+        border: 1px solid #000;
+        border-bottom: 0 none;
+        margin-top: -1px;
+        padding-bottom: 12px;
+      }
+
+      .dropdown-box {
+        width: 350px;
+        padding-bottom: 12px;
+      }
+
+      .menu ul {
+        display: none;
+        position: absolute;
+        min-width: 180px;
+        list-style: inside none;
+        margin: 0;
+        margin-top: 40px;
+        padding: 4px 0px;
+        background: #fff;
+        border: 1px solid #000;
+        z-index: 1;
+      }
+
+      .menu ul li {
+        margin: 0;
+        padding: 0;
+        list-style: inside none;
+        border: 0 none;
+        float: none;
+      }
+
+      .menu ul li a {
+        float: none;
+        padding: 6px;
+        font-weight: normal;
+        color: #777;
+        border: 0 none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .menu ul li:last-child a {
+        border-bottom: 1px solid transparent;
+      }
+
+      .menu ul li a:hover {
+        border: 0 none;
+        padding: 6px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+      }
+
+      .menu ul a {
+        white-space: nowrap;
+      }
+
+      .menu li ul {
+        display: none;
+      }
+
+      .menu li:hover>ul {
+        display: block;
+      }
+
+      .dropdown-box {
+        display: none;
+        position: absolute;
+        width: auto;
+        margin-top: 31px;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #000;
+        z-index: 1;
+      }
+
+      .dropdown-box p {
+        color: #777;
+        text-align: justify;
+        margin: 0;
+      }
+
+      .menu li:hover>.dropdown-box {
+        display: block;
+      }
+
+      .left li {
+        float: left;
+      }
+
+      .left li a {
+        float: left;
+      }
+
+      .left li:hover a.drop {
+        margin-left: -1px;
+        padding-left: 10px;
+      }
+
+      .left ul, .left .dropdown-box {
+        left: -1px;
+      }
+
+      .right li {
+        float: right;
+      }
+
+      .right li a {
+        float: right;
+      }
+
+      .right li:hover a.drop {
+        margin-right: -1px;
+        padding-right: 16px;
+      }
+
+      .right ul, .right .dropdown-box {
+        right: -1px;
+      }
+
+      .white {
+        background-color: #cccccc;
+      }
+
+      .white li a {
+        color: #777777;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .white li a:hover {
+        background-color: #e4e4e4;
+        color: #444444;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+        border-top: 1px solid #aaaaaa;
+      }
+
+      .white ul li a:hover {
+        background-color: #e5e5e5;
+        border-top-color: #ccc;
+        border-bottom-color: #ccc;
+      }
+
+      .white ul li a:active, .white li a:active {
+        background-color: #ec008c;
+        color: #fff;
+        display: block;
+        text-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="menu" class="menu white left">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">HTML</a></li>
+      <li><a href="">CSS</a></li>
+      <li><a href="" class="drop">Todo List</a>
+        <ul>
+          <li><a href="#">Calendars</a></li>
+        </ul></li>
+      <li><a href="">My</a></li>
+      <li><a href="" class="drop">Help</a>
+        <ul>
+          <li><a href="#">Calendars</a></li>
+          <li><a href="#">Item</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
