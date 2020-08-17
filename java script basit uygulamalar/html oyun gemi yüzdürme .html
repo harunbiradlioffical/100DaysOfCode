@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+	<body>
+		<div style="position: absolute; top: 50px; left: 50px;">
+			<canvas id="canvas" width="200" height="200">
+			 Your browser does not support the HTML 5 Canvas. 
+			</canvas>/* power java 2s biradlioffical*/
+			<script type="text/javascript">
+
+			  let theCanvas = document.getElementById('canvas');
+				let context = theCanvas.getContext('2d');
+			  let rotation=0;
+			  let x=50;
+			  let y=50;
+			  let facingX=0;
+			  let facingY=0;
+			  let movingX=0;
+			  let movingY=0;
+			  let width=20;
+			  let height=20;
+			  let rotationalVelocity=5; //how many degrees to turn the ship
+			  let thrustAcceleration=.03;
+			  let keyPressList=[];
+			  function drawScreen() {
+				if (keyPressList[38]==true){
+				//thrust
+				  let angleInRadians = rotation * Math.PI / 180;
+				  facingX=Math.cos(angleInRadians);
+				  facingY=Math.sin(angleInRadians);
+				  
+				  movingX=movingX+thrustAcceleration*facingX;
+				  movingY=movingY+thrustAcceleration*facingY;
+				
+				}
+				
+				if (keyPressList[37]==true) {
+				  //rotate counter-clockwise
+				  rotation-=rotationalVelocity;
+				  
+				  
+				}
+				
+				if (keyPressList[39]==true) {
+				  //rotate clockwise
+				  rotation+=rotationalVelocity;;
+				}
+			  
+				x=x+movingX;
+				y=y+movingY;
+			  
+				// draw background and text 
+				context.fillStyle = '#000000';
+				  context.fillRect(0, 0, 200, 200);
+				context.fillStyle    = '#ffffff';
+				
+				//transformation
+				let angleInRadians = rotation * Math.PI / 180;
+				context.save(); //save current state in stack 
+				context.setTransform(1,0,0,1,0,0); // reset to identity
+				
+				//translate the canvas origin to the center of the player
+				context.translate(x+.5*width,y+.5*height);
+				context.rotate(angleInRadians);
+				
+				//drawShip
+				
+				context.strokeStyle = '#ffffff';
+				context.beginPath();
+				
+				//hard coding in locations
+				//facing right
+				context.moveTo(-10,-10); 
+				context.lineTo(10,0);
+				context.moveTo(10,1);
+				context.lineTo(-10,10);
+				context.lineTo(1,1);
+				context.moveTo(1,-1);
+				context.lineTo(-10,-10);
+				
+				context.stroke();
+				context.closePath();
+				
+				//restore context
+				context.restore(); //pop old state on to screen
+			  }
+			  
+			  const FRAME_RATE=40;
+			  let intervalTime=1000/FRAME_RATE;
+			  gameLoop();
+			  
+			  function gameLoop() {
+				drawScreen();
+				window.setTimeout(gameLoop, intervalTime);
+			  }
+			  
+			  document.onkeydown=function(e){
+				
+				e=e?e:window.event;
+				keyPressList[e.keyCode]=true;
+			  }
+			  
+			  document.onkeyup=function(e){
+				e=e?e:window.event;
+				keyPressList[e.keyCode]=false;
+			  }
+
+			</script> 
+
+		</div>
+	</body>
+</html>
