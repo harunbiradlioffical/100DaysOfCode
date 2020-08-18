@@ -4,7 +4,7 @@
 		<div style="position: absolute; top: 50px; left: 50px;">
 			<canvas id="canvas" width="200" height="200">
 			 Your browser does not support the HTML 5 Canvas. 
-			</canvas>/* power java 2s biradlioffical*/
+			</canvas>/* power java2s.com biradlioffical*/
 			<script type="text/javascript">
 
 			  let theCanvas = document.getElementById('canvas');
@@ -18,12 +18,12 @@
 			  let movingY=0;
 			  let width=20;
 			  let height=20;
-			  let rotationalVelocity=5; //how many degrees to turn the ship
+			  let rotationalVelocity=5; // gemiyi kaç derece döndüreceğiz.
 			  let thrustAcceleration=.03;
 			  let keyPressList=[];
 			  function drawScreen() {
 				if (keyPressList[38]==true){
-				//thrust
+				//itme
 				  let angleInRadians = rotation * Math.PI / 180;
 				  facingX=Math.cos(angleInRadians);
 				  facingY=Math.sin(angleInRadians);
@@ -34,41 +34,40 @@
 				}
 				
 				if (keyPressList[37]==true) {
-				  //rotate counter-clockwise
+				  //saat yönünün tersine çevirir.
 				  rotation-=rotationalVelocity;
 				  
 				  
 				}
 				
 				if (keyPressList[39]==true) {
-				  //rotate clockwise
+				  //saat yönünde çevir
 				  rotation+=rotationalVelocity;;
 				}
 			  
 				x=x+movingX;
 				y=y+movingY;
 			  
-				// draw background and text 
+				// arka plan 
 				context.fillStyle = '#000000';
 				  context.fillRect(0, 0, 200, 200);
 				context.fillStyle    = '#ffffff';
 				
-				//transformation
+				//dönüşüm
 				let angleInRadians = rotation * Math.PI / 180;
 				context.save(); //save current state in stack 
 				context.setTransform(1,0,0,1,0,0); // reset to identity
 				
-				//translate the canvas origin to the center of the player
+				//dönme hareketi
 				context.translate(x+.5*width,y+.5*height);
 				context.rotate(angleInRadians);
 				
-				//drawShip
+				//gemi
 				
 				context.strokeStyle = '#ffffff';
 				context.beginPath();
 				
-				//hard coding in locations
-				//facing right
+				//konum
 				context.moveTo(-10,-10); 
 				context.lineTo(10,0);
 				context.moveTo(10,1);
@@ -80,8 +79,8 @@
 				context.stroke();
 				context.closePath();
 				
-				//restore context
-				context.restore(); //pop old state on to screen
+				//geri yükleme
+				context.restore(); //eski durum
 			  }
 			  
 			  const FRAME_RATE=40;
