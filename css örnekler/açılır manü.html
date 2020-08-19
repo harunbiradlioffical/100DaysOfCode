@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type='text/css'>
+    #navbar {
+      width: 900px;
+      color: #EEE;
+      padding: 10px 10px 10px 10px;
+      float: left;
+      background: #EEE;
+    }
+
+    #nav, #nav ul {
+      padding: 0px 15px 0px 15px;
+      margin: 0;
+      list-style: none;
+      line-height: 18px;
+    }
+
+    #nav a {
+      display: block;
+      width: 140px;
+    }
+
+    #navbar li {
+      list-style: none;
+      float: left;
+      padding: 0px 15px 0px 15px;
+      display: block;
+      width: 140px;
+      text-align: center;
+      height: 18px;
+      text-decoration: none;
+    }
+
+    #navbar li a {
+      text-decoration: none;
+      color: red;
+    }
+
+    #navbar li ul {
+      list-style: none;
+      color: black;
+      background: #DDD;
+      border-bottom: solid 1px #AAA;
+      width: 140px;
+      display: block;
+      position: relative;
+      left: -999em;
+    }
+
+    #navbar li:hover ul, #navbar li.sfhover ul {
+      left: 0;
+      padding: 0;
+    }
+
+    #navbar li li {
+      padding: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="#">menü 1</a>
+      <ul>
+          <li><a href="#">ONE</a></li>
+          <li><a href="#">TWO</a></li>
+          <li><a href="#">THREE</a></li>
+        </ul></li>
+      <li><a href="#">menü 2</a>
+      <ul>
+          <li><a href="#">ONE</a></li>
+          <li><a href="#">TWO</a></li>
+          <li><a href="#">THREE</a></li>
+        </ul></li>
+      <li><a href="#">menü 3</a>
+      <ul>
+          <li><a href="#">ONE</a></li>
+          <li><a href="#">TWO</a></li>
+          <li><a href="#">THREE</a></li>
+        </ul></li>
+      <li><a href="#">menü 4</a>
+      <ul>
+          <li><a href="#">ONE</a></li>
+          <li><a href="#">TWO</a></li>
+          <li><a href="#">THREE</a></li>
+        </ul></li>
+      <li><a href="#">menü 5</a>
+      <ul>
+          <li><a href="#">ONE</a></li>
+          <li><a href="#">TWO</a></li>
+          <li><a href="#">THREE</a></li>
+        </ul></li>
+    </ul>
+  </body>
+</html>
