@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type='text/css'>
+    .topbar {<!-- -->
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      list-style: none;
+      padding: 0;
+      background: #CCC;
+    }
+
+    .topbar::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .topbar>li {
+      display: inline-block;
+      padding: 2px 10px;
+      margin: 0 2px;
+      background: #BBB;
+      cursor: pointer;
+    }
+
+    .topbar>li:first-child {
+      margin-left: 0;
+    }
+
+    .topbar>li:hover {
+      background: #AAA;
+    }
+
+    .search {
+      float: right;
+      width: 120px;
+      padding: 2px 10px;
+      background: #888;
+    }
+    </style>
+  </head>
+  <body>
+    <br />
+    <ul class="topbar">
+      <li>Bir</li>
+      <li>iki</li>
+      <li>üç</li>
+      <div class="search">Arama</div>
+    </ul>
+  </body>
+</html>
