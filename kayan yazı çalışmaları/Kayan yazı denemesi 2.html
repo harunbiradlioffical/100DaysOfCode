@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <style type='text/css'>
+        .marquee {
+          width: 450px;
+          margin: 0 auto;
+          overflow: hidden;
+          white-space: nowrap;
+          box-sizing: border-box;
+          animation: marquee 3s linear infinite;
+        }   
+
+        .marquee:hover {
+          animation-play-state: paused
+        }     
+
+      @keyframes marquee { 0% { text-indent: 100% }
+      100%{text-indent: -50%}}
+    </style>
+  </head>
+  <body>
+    <p class="marquee">haberler iyi kayan yazı çalışması denemesi 2</p>
+  </body>
+</html>
