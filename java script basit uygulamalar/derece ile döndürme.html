@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+      <canvas id="canvas"></canvas>
+      <input type="range" onchange="getDegrees(this.value);" value="45"
+        min="0" max="360" />
+      <span id="displayDeg"></span> degrees
+          <script type='text/javascript'>
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            canvas.width = 250;
+            canvas.height = 250;
+            var cx = canvas.width/2;
+            var cy = canvas.height/2;
+            var x = -50;
+            var y = -50;
+            var w = 100;
+            var h = 100;
+            var deg = 45;
+            var displayDeg = document.getElementById("displayDeg");
+            function clear() {
+                ctx.save();
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.restore();
+            }
+            function renderSquare() {
+                displayDeg.innerHTML = deg; 
+                ctx.save();
+                ctx.translate(cx, cy); 
+                ctx.rotate(deg * Math.PI/180); 
+                ctx.fillRect(x, y, w, h);
+                ctx.restore();
+            }
+            function getDegrees(theta) {
+                deg = theta;
+                clear();
+                renderSquare();
+            }
+            renderSquare(); 
+        </script>
+    </body>
+</html>
