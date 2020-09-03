@@ -15,6 +15,24 @@
 	justify-content: center;
 	align-items: center;
 }
+.scene i
+{
+	position: absolute;
+	top: -250px;
+	background: rgba(255,255,255,0.5);
+	animation: animateStars linear infinite;
+}
+@keyframes animateStars
+{
+	0%
+	{
+		transform: translateY(0);
+	}
+	100%
+	{
+		transform: translateY(200vh);
+	}
+}
 .scene .rocket
 {
 	position: relative;
@@ -31,6 +49,7 @@
 		transform: translateY(2px);
 	}
 }
+
 .scene .rocket::before
 {
 	content: '';
@@ -41,4 +60,16 @@
 	width: 10px;
 	height: 200px;
 	background: linear-gradient(#00d0ff,transparent);
+}
+.scene .rocket::after
+{
+	content: '';
+	position: absolute;
+	bottom: -200px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 10px;
+	height: 200px;
+	background: linear-gradient(#00d0ff,transparent);
+	filter: blur(20px);
 }
