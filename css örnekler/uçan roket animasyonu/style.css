@@ -31,3 +31,14 @@
 		transform: translateY(2px);
 	}
 }
+.scene .rocket::before
+{
+	content: '';
+	position: absolute;
+	bottom: -200px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 10px;
+	height: 200px;
+	background: linear-gradient(#00d0ff,transparent);
+}
