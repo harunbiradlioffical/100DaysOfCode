@@ -71,5 +71,5 @@
 	width: 10px;
 	height: 200px;
 	background: linear-gradient(#00d0ff,transparent);
-	filter: blur(20px);
+	filter: blur(30px);
 }
