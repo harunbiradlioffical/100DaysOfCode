@@ -36,7 +36,7 @@
 .scene .rocket
 {
 	position: relative;
-	animation: animate 0.2s ease infinite;;
+	animation: animate 0.5s ease infinite;;
 }
 @keyframes animate
 {
